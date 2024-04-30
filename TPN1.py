@@ -13,6 +13,7 @@ def numeroromanos(numero):
         or "CCCC" in numero
         or "DD" in numero
         or "MMMM" in numero
+        or "IIX" in numero
     ):
         raise ValueError("Numero romano invalido: revisar repeticiones invalidas")
 
@@ -29,7 +30,7 @@ def numeroromanos(numero):
         return numeros[numero[0]] + numeroromanos(numero[1:])
 
 
-print(numeroromanos("I"))
+print(numeroromanos("IIX"))
 
 # El problema de la mochila Jedi. Suponga que un Jedi (Luke Skywalker, Obi-Wan Kenobi, Rey u
 # otro, el que más le guste) está atrapado, pero muy cerca está su mochila que contiene muchos
