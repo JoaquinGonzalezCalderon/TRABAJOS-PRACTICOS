@@ -15,7 +15,7 @@ def numeroromanos(numero):
         or "MMMM" in numero
         or "IIX" in numero
     ):
-        raise ValueError("Numero romano invalido: revisar repeticiones invalidas")
+        raise ValueError("Numero romano invalido: revisar repeticiones invalidas / Ingresos invalidos")
 
     if len(numero) == 0:
         return 0

@@ -66,7 +66,9 @@ pilamarvel = [
 print("")
 print("GROOT Y ROCKET RACCOON")
 print("")
+
 contador = 0
+
 for personaje, apariciones in pilamarvel:
 
     contador = contador + 1
