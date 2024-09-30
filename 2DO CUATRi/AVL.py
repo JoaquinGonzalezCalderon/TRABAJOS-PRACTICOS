@@ -211,7 +211,7 @@ class ARBOLAVL:
             pendientes.arrive(self.root)
 
         while pendientes.size() > 0:
-            node = pendientes.attention()
+            node = pendientes.atention()
             print(f"nivel {node.height}", node.value)
             if node.left is not None:
                 pendientes.arrive(node.left)
