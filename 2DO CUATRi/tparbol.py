@@ -121,7 +121,8 @@ arbol_avl = ARBOLAVL()
 print("")
 print("--------------------------------------------")
 print("")
-# Inserción de las criaturas y quién las derrotó
+
+# Criaturas y quien las derroto
 arbol_avl.insert_node("Ceto", {"derrotado_por": ""})
 arbol_avl.insert_node("Tifón", {"derrotado_por": "Zeus"})
 arbol_avl.insert_node("Equidna", {"derrotado_por": "Argos Panoptes"})
@@ -162,7 +163,7 @@ arbol_avl.insert_node("Jabalí de Erimanto", {"derrotado_por": ""})
 print("")
 print("--------------------------------------------")
 print("")
-# a. Listado inorden de las criaturas y quién las derrotó
+# a. Inorden
 print("Listado inorden de las criaturas:")
 arbol_avl.inorden()
 
@@ -170,7 +171,7 @@ print("")
 print("--------------------------------------------")
 print("")
 # b. Cargar descripciones
-# Función para agregar o modificar la descripción de una criatura
+
 def agregar_descripcion(arbol, nombre_criatura, descripcion):
     criatura = arbol.search(nombre_criatura)
     if criatura:
@@ -251,7 +252,7 @@ print("")
 print("--------------------------------------------")
 print("")
 
-# e. Listar criaturas derrotadas por Heracles
+# e. Listado de criaturas derrotadas por Heracles
 print("Criaturas derrotadas por Heracles:")
 def criaturas_por_heracles(root):
     if root:
@@ -266,7 +267,7 @@ print("")
 print("--------------------------------------------")
 print("")
 
-# f. Listar criaturas no derrotadas
+# f. Listado de criaturas no derrotadas
 print("Criaturas no derrotadas:")
 def criaturas_no_derrotadas(root):
     if root:
