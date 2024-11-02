@@ -1,4 +1,3 @@
-
 from cola import Queue
 
 class BinaryTree:
@@ -164,36 +163,3 @@ class BinaryTree:
             self.root, delete_value = __delete(self.root, value)
         return delete_value
 
-# tree = BinaryTree()
-
-# tree.insert_node(19)
-# tree.insert_node(7)
-# tree.insert_node(31)
-# tree.insert_node(11)
-# tree.insert_node(10)
-# tree.insert_node(45)
-# tree.insert_node(22)
-# tree.insert_node(27)
-
-# pos = tree.search(27)
-# if pos:
-#     print('lo encontre', pos.value)
-# else:
-#     print('no esta')
-
-# tree.delete_node(7)
-# tree.delete_node(11)
-# tree.delete_node(31)
-# tree.delete_node(27)
-# tree.delete_node(45)
-# tree.delete_node(22)
-# tree.delete_node(19)
-# tree.delete_node(10)
-# tree.insert_node(27)
-
-# print(tree.delete_node(100))
-# tree.preorden()
-
-# print(tree.root.right)
-
-# tree.by_level()
