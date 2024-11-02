@@ -2,21 +2,20 @@
 
 
 def numeroromanos(numero):
-    # Diccionario que almacena los valores decimales correspondientes a cada símbolo romano.
+    
     numeros = {"I": 1, "V": 5, "X": 10, "L": 50, "C": 100, "D": 500, "M": 1000}
 
     # Verificación de patrones inválidos de repetición en el número romano ingresado.
     if (
-        "IIII" in numero       # 'I' no puede repetirse más de tres veces consecutivas.
-        or "VV" in numero      # 'V' no puede repetirse.
-        or "XXXX" in numero    # 'X' no puede repetirse más de tres veces consecutivas.
-        or "LL" in numero      # 'L' no puede repetirse.
-        or "CCCC" in numero    # 'C' no puede repetirse más de tres veces consecutivas.
-        or "DD" in numero      # 'D' no puede repetirse.
-        or "MMMM" in numero    # 'M' no puede repetirse más de tres veces consecutivas.
-        or "IIX" in numero     # Patrón inválido 'IIX'.
+        "IIII" in numero       
+        or "VV" in numero      
+        or "XXXX" in numero    
+        or "LL" in numero      
+        or "CCCC" in numero    
+        or "DD" in numero      
+        or "MMMM" in numero    
+        or "IIX" in numero     
     ):
-        # Levanta un error si el número romano contiene repeticiones o patrones no permitidos.
         raise ValueError("Numero romano invalido: revisar repeticiones invalidas / Ingresos invalidos")
 
     # Caso base: si el número es una cadena vacía, se devuelve 0 (termina la recursión).
@@ -37,9 +36,9 @@ def numeroromanos(numero):
         # Realiza la suma y continúa la recursión con el número a partir del segundo símbolo.
         return numeros[numero[0]] + numeroromanos(numero[1:])
 
-# Ejemplo de prueba con un número romano inválido.
-print(numeroromanos("IIX"))  # Espera un ValueError debido al patrón 'IIX' inválido.
-
+print("PUNTO 1 RECURSIVIDAD")
+print(numeroromanos("X"))  
+print("")
 
 
 # El problema de la mochila Jedi. Suponga que un Jedi (Luke Skywalker, Obi-Wan Kenobi, Rey u
@@ -55,7 +54,7 @@ print(numeroromanos("IIX"))  # Espera un ValueError debido al patrón 'IIX' inv�
 
 # c. Utilizar un vector para representar la mochila.
 
-from typing import List  # Importa el tipo List para las anotaciones de tipo.
+from typing import List 
 
 def usarlafuerza(objeto: str, mochila: List[str], contador=0) -> str:
     # Caso base: si la mochila está vacía y no se encontró el sable, se indica que no se encontró el objeto.
@@ -70,7 +69,7 @@ def usarlafuerza(objeto: str, mochila: List[str], contador=0) -> str:
     else:
         return usarlafuerza(objeto, mochila[1:], contador + 1)
 
-# Ejemplo de prueba con una lista de objetos en la mochila de Luke.
+# Ejemplo 
 mochiladeluke = [
     "holocron sith",
     "blaster",
@@ -79,5 +78,6 @@ mochiladeluke = [
     "casco stormtrooper",
 ]
 
-# Llamada a la función para buscar el sable de luz en la mochila de Luke.
-print(usarlafuerza("sable de luz", mochiladeluke))  # Espera encontrar el sable de luz y muestra el contador.
+print("PUNTO 2 RECURSIVIDAD")
+print(usarlafuerza("sable de luz", mochiladeluke))  
+print("")
