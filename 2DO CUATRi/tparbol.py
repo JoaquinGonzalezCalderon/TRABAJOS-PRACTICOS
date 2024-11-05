@@ -232,6 +232,7 @@ print("--------------------------------------------")
 print("")
 
 # d. Tres héroes o dioses que derrotaron más criaturas
+
 heroes = {}
 def contar_derrotas(root):
     if root:

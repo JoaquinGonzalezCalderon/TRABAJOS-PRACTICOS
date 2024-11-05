@@ -61,6 +61,7 @@ print("Árbol de expansión mínima:", arbol_expansion_minima)
 
 # Sacamos los pesos del arbol anterior y hacemos la suma
 distancia_total_mst = 0
+
 for arista in arbol_expansion_minima[0].split(';'):
     if '-' in arista:
         # La distancia (peso en metros) esta al final de la sentencia
@@ -77,13 +78,13 @@ camino_mas_corto_stack = grafo.dijkstra("habitación 1")
 distancia_total_camino = 0
 
 # Buscamos la distancia acumulada hasta "sala de estar" en el pila
+
 while True:
     nodo = camino_mas_corto_stack.pop()
-    if nodo is None:
-        break
-    if nodo[1][0] == "sala de estar":
+    if nodo and nodo[1][0] == "sala de estar":
         distancia_total_camino = nodo[0]  # Distancia acumulada en la pila
         break
+
 print("")
 print("Distancia total desde habitación 1 hasta sala de estar:", distancia_total_camino, "metros")
 
